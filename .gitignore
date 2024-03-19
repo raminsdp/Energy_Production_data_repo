@@ -1,8 +1,4 @@
-data/**
-
-CSV/**
-
-
+Dataset/raw_data/**
 
 
 # Byte-compiled / optimized / DLL files
