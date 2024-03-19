@@ -45,7 +45,7 @@ for station in stations:
     df_stations = df_stations.merge(df_stat.loc[mask,:],on='date')
 
 ### production of solar energy in Bavaria in megawatt
-df_en_raw = pd.read_table('../Dataset/solarEnergyFeedIn_BY_2023-01-01_2023-12-31.csv',sep=';',parse_dates=['Datum'],decimal=',')
+df_en_raw = pd.read_table('../Dataset/raw_data/solarEnergyFeedIn_BY_2023-01-01_2023-12-31.csv',sep=';',parse_dates=['Datum'],decimal=',')
 
 df_en = pd.DataFrame({'date': pd.date_range(start='1/1/2023', freq='1d', periods=365)})
 df_en.loc[:,'Prog_in_MW'] = pd.DataFrame(df_en_raw.groupby(['Datum'], as_index=False)['Prognostiziert in MW'].sum()).iloc[:,1]
@@ -79,7 +79,7 @@ def read_and_combine_files(start, end, folder_path):
     combined_df = pd.concat(dfs, axis=0, ignore_index=True)
     return combined_df
 
-folder_path = r'../Dataset/Marktstammdatenregister/'
+folder_path = r'../Dataset/raw_data/Marktstammdatenregister/'
 
 combined_df = read_and_combine_files(1, 464999, folder_path)
 
@@ -120,7 +120,7 @@ df_modules = df_modules.drop(columns=['Inbetriebnahmedatum der Einheit'])
 #df_mod_raw = pd.DataFrame(columns=['Datum', 'PLZ', 'Bruttoleistung','Nettonennleistung','Inbetriebnahme'])
 #counter = 0
 #for file in files:
-#    source = 'data/EinheitenSolar_'+str(file)+'.xml'
+#    source = 'Dataset/raw_data/EinheitenSolar_'+str(file)+'.xml'
 #    tree = ET.parse(source)
 #    root = tree.getroot()
 #    
@@ -148,4 +148,4 @@ df_modules = df_modules.drop(columns=['Inbetriebnahmedatum der Einheit'])
 # merging dataframes
 df_final_raw_2015_2023 = df_modules.merge(df_modules,df_en, on = 'date')
 df_final_raw_2015_2023 = df_final_raw_2015_2023.merge(df_stations, on = 'date')
-df_final_raw_2015_2023.to_csv('../CSV/df_final_raw_2015_2023.csv')
+df_final_raw_2015_2023.to_csv('../Dataset/preprocessed_data/df_final_raw_2015_2023.csv')
