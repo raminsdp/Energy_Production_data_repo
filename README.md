@@ -1,5 +1,7 @@
 # <p align="center">Solar Energy Production</p>
 
+![Solar Panels in Bavaria](https://www.energie-experten.org/fileadmin/_processed_/e/1/csm_Muenchen_80939_PV-Anlage_Allianz_Arena_Foto_01_GOLDBECK_SOLAR_c5bacdeb45.jpg)
+
 ## About the Project <a name="about"></a>  
 
 In regards of the transformation of the german and european energy market and the political supported growth of renewable energies, there is still an issue with energy production, as no control on the actual production is possible, but rather depends solely on environmental conditions (day/night, wind/no wind).
@@ -34,6 +36,7 @@ Plausibility of data was checked, missing values were imputed. Data from Tennet 
 
 ### Preprocessing of given Data
 
+For imputation of missing values the **mean** value of the **median** of the row (actual day and respective physical parameter) and the **median** of the column (respective day over the years) was calculated and used. Since the outcome is acceptable, a different approach with e.g. weighted medians, especially for the station itself (=column) was skipped.<br>
 Since daily predicted energy production is a target of this project, the technical capacity for this needs to be expressed as a value within the dataset. Therefore the daily **cumulative** solar panels was calculated, based on registering date at Marktstammdatenregister.  
 
 ## Modelling <a name="modelling"></a>
@@ -43,9 +46,15 @@ The dataset is a combination of various variables from a 9-year-timeframe. It ca
 
 A regression model was used to predict daily produced solar energy with the given features. Several models for regression and artificial neural networks were tested and finally a RandomForestRegressor showed the best fit.
 
+| ![RandomForestRegressor](https://github.com/raminsdp/Energy_Production_data_repo/blob/main/Dataset/images/rf_model_aim.PNG) | ![LSTM Neural Network](https://github.com/raminsdp/Energy_Production_data_repo/blob/main/Dataset/images/lstm_ann.PNG) |
+| --- | --- |
+
 ### Time-Series Approach
 
 For forecasting of a whole year a SARIMA model was used, since seasonality was confirmed by mandatory data analysis within a time-series approach.
+
+| ![Forecast SARIMA 2023](https://github.com/raminsdp/Energy_Production_data_repo/blob/main/Dataset/images/forecast_sarima_2023.png) | ![ACF and PACF](https://github.com/raminsdp/Energy_Production_data_repo/blob/main/Dataset/images/pacf_acf.png) |
+| --- | --- |
 
 ## Use Cases <a name="use-cases"></a> 
 
