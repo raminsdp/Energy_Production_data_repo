@@ -74,6 +74,7 @@ The used data is from public sources with following license regulations:
 
 The project was realised with Jupyter, using following libaries and frameworks for EDA, modelling and visualisation:
 
+<<<<<<< HEAD
 [Pandas](https://pandas.pydata.org/)
 Numpy
 Matplotlib
@@ -81,3 +82,12 @@ Seaborn
 SARIMA statsmodels.api
 Scikit Learn
 TensorFlow
+=======
+- [Pandas](https://pandas.pydata.org/)
+- [Numpy](https://numpy.org/)
+- [Matplotlib](https://matplotlib.org/3.5.3/api/_as_gen/matplotlib.pyplot.html)
+- [Seaborn](https://seaborn.pydata.org/)
+- [statsmodels.api](https://www.statsmodels.org/stable/index.html)
+- [Scikit Learn](https://scikit-learn.org/)
+- [TensorFlow](https://www.tensorflow.org/)
+>>>>>>> d740dcb (files update)
