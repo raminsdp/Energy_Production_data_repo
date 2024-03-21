@@ -14,7 +14,7 @@ A strategical 1-year-forecast as well as daily predictions for operational plann
 5. [Outlook](#outlook)
 6. [Contributing](#contributing)
 7. [License](#license)
-8. [Acknowledgements](acknowledgements)
+8. [Acknowledgements](#acknowledgements)
 
 ## Data Gathering, EDA and Preprocessing <a name="eda"></a> 
 
@@ -49,12 +49,15 @@ For forecasting of a whole year a SARIMA model was used, since seasonality was c
 
 ## Use Cases <a name="use-cases"></a> 
 
-**Customers** will have the advantage to have the forecasted energy production visualized, to have their minds eased about any worries concerning power supply. <br>
-**Companies** in the field of energy production can look forward with daily predicted power generation, to e.g. plan their production and energy storage of virtual power plants in advance.
+**Customers** will have the advantage to have the forecasted energy production visualized, to have their minds eased about any worries concerning power supply. For this the 1-year forecast of the time-series approach is applicable.<br>
+**Companies** in the field of energy production can look forward with daily predicted power generation, to e.g. plan their production and energy storage of virtual power plants in advance. The regression model is to be used for the prediction.
 
 ## Outlook <a name="outlook"></a> 
 
 This project was successfully validated with public data for Bavaria, Germany. Data for weather and solar panels are available for the whole of Germany from the specific sources. The produced solar energy is from the Netzbetreiber TenneT, who also publishes data for wind energy, for its supplied regions of Bayern, Rheinland-Pfalz, Niedersachsen/Bremen and Schleswig-Holstein/Hamburg. Data for other regions may not be available at this scale of transparency.
+
+In a subsequent project additional data can be used fore increased precision. Further scale of this project could be different states, countries and type of renewable energy (wind). Also, a regression-approach for a yearly forecasting using trends and means of given data can be tried and compared to the time-series approach.
+
 
 ## Contributing <a name="contributing"></a> 
 
