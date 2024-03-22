@@ -71,9 +71,9 @@ In a subsequent project additional data can be used fore increased precision. Fu
 ## Contributing <a name="contributing"></a> 
 
 The project was realised as part of the StackFuel Portfolio Projekt in March 2024 from following participants:
-- [Mohammad Hussain Rajai](https://github.com/mhrajai)
-- [Ramin Sadrpanah](https://github.com/raminsdp)
-- [Ullrich Seidel](https://github.com/ullrich-seidel)
+- Mohammad Hussain Rajai [GitHub](https://github.com/mhrajai) [LinkedIn](https://www.linkedin.com/in/mohammad-hussain-rajai-b6a729197/)
+- Ramin Sadrpanah [GitHub](https://github.com/raminsdp) [LinkedIn](https://www.linkedin.com/in/ramin-sadrpanah-32bba8b8)
+- Ullrich Seidel [GitHub](https://github.com/ullrich-seidel)
 
 ## License <a name="license"></a> 
 
